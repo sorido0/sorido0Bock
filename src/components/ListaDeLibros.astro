@@ -1,0 +1,14 @@
+---
+import LosLibros from "./LosLibros.astro";
+import { libros } from '../data/libros'
+---
+
+<ul class="grid grid-cols-2 md:grid-cols-3 gap-3 px-4">
+    {
+        libros.map(({ id, title, img }) => (
+            <li>
+            <LosLibros id={id} titulo={title} img={img}/>
+            </li>
+        ) )
+       }
+</ul>
